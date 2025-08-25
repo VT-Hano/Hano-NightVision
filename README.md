@@ -3,53 +3,53 @@
 
 # Hano-NightVision
 
-Một plugin đơn giản nhưng mạnh mẽ cho phép người chơi và quản trị viên dễ dàng quản lý hiệu ứng nhìn trong bóng tối (Night Vision) trên máy chủ Paper/Spigot.
+A simple yet powerful plugin that allows players and administrators to easily manage the Night Vision effect on your Paper/Spigot server.
 
 -----
 
-## ✨ Tính năng
+## ✨ Features
 
-  * **Bật/Tắt cho bản thân**: Người chơi có thể tự bật hoặc tắt hiệu ứng nhìn trong bóng tối một cách nhanh chóng.
-  * **Bật/Tắt cho người khác**: Quản trị viên có thể bật hoặc tắt hiệu ứng này cho bất kỳ người chơi nào khác trên máy chủ.
-  * **Tùy chỉnh hoàn toàn**: Tất cả các lệnh, bí danh (aliases) và tin nhắn đều có thể được cấu hình trong file `config.yml`.
-  * **Hỗ trợ mã màu**: Dễ dàng tùy chỉnh màu sắc cho các tin nhắn bằng cách sử dụng mã màu của Minecraft (`&a`, `&c`, v.v.).
-  * **Lệnh tải lại (Reload)**: Tải lại cấu hình plugin ngay trong game mà không cần khởi động lại máy chủ.
-  * **Dựa trên quyền hạn**: Mọi tính năng đều được kiểm soát bởi hệ thống quyền (permissions), giúp bạn dễ dàng phân quyền cho các nhóm người chơi.
+  * **Toggle for Yourself**: Players can quickly toggle the night vision effect on or off for themselves.
+  * **Toggle for Others**: Administrators can enable or disable the effect for any other player on the server.
+  * **Fully Configurable**: All commands, aliases, and messages can be configured in the `config.yml` file.
+  * **Color Code Support**: Easily customize message colors using Minecraft's color codes (`&a`, `&c`, etc.).
+  * **Reload Command**: Reload the plugin's configuration in-game without needing to restart the server.
+  * **Permission Based**: Every feature is controlled by a permission system, making it easy to manage access for different player groups.
 
 -----
 
-## 🎮 Lệnh & Quyền hạn
+## 🎮 Commands & Permissions
 
-### Lệnh
+### Commands
 
-| Lệnh | Bí danh (Mặc định) | Mô tả |
+| Command | Aliases (Default) | Description |
 | --- | --- | --- |
-| `/hano-nightvision` | `/nv`, `/hano-nv` | Bật hoặc tắt hiệu ứng nhìn trong bóng tối cho chính bạn. |
-| `/hano-nightvision <player>` | `/nv <player>` | Bật hoặc tắt hiệu ứng nhìn trong bóng tối cho một người chơi khác. |
-| `/hano-nv-reload` | `/nvrl` | Tải lại file cấu hình của plugin. |
+| `/hano-nightvision` | `/nv`, `/hano-nv` | Toggles the night vision effect for yourself. |
+| `/hano-nightvision <player>` | `/nv <player>` | Toggles the night vision effect for another player. |
+| `/hano-nv-reload` | `/nvrl` | Reloads the plugin's configuration file. |
 
-### Quyền hạn (Permissions)
+### Permissions
 
-| Quyền | Mô tả | Mặc định |
+| Permission | Description | Default |
 | --- | --- | --- |
-| `hano.nightvision.use` | Cho phép người chơi sử dụng lệnh để bật/tắt Night Vision cho chính mình. | OP |
-| `hano.nightvision.other` | Cho phép người chơi bật/tắt Night Vision cho người khác. | OP |
-| `hano.nightvision.reload` | Cho phép người chơi sử dụng lệnh tải lại cấu hình. | OP |
+| `hano.nightvision.use` | Allows a player to use the command to toggle Night Vision for themselves. | OP |
+| `hano.nightvision.other` | Allows a player to toggle Night Vision for others. | OP |
+| `hano.nightvision.reload` | Allows a player to use the reload command. | OP |
 
 -----
 
-## 🛠️ Cài đặt
+## 🛠️ Installation
 
-1.  Tải file `Hano-NightVision-x.x.x.jar` mới nhất.
-2.  Đặt file `.jar` vào thư mục `plugins` của máy chủ Paper/Spigot của bạn.
-3.  Khởi động lại hoặc tải lại máy chủ.
-4.  (Tùy chọn) Chỉnh sửa file `plugins/Hano-NightVision/config.yml` theo ý muốn của bạn và sau đó dùng lệnh `/nvrl` để áp dụng thay đổi.
+1.  Download the latest `Hano-NightVision-x.x.x.jar` file.
+2.  Place the `.jar` file into your Paper/Spigot server's `plugins` directory.
+3.  Restart or reload your server.
+4.  (Optional) Edit the `plugins/Hano-NightVision/config.yml` file to your liking, then use the `/nvrl` command to apply the changes.
 
 -----
 
-## ⚙️ Cấu hình
+## ⚙️ Configuration
 
-Bạn có thể tùy chỉnh mọi thứ trong file `config.yml`. Dưới đây là cấu hình mặc định:
+You can customize everything in the `config.yml` file. Below is the default configuration:
 
 ```yaml
 # config.yml
@@ -59,23 +59,23 @@ command:
 
 messages:
   prefix: "&7[&aHano-NightVision&7] "
-  no-permission: "&cBạn không có quyền để sử dụng lệnh này."
-  player-only-command: "&cLệnh này chỉ có thể được sử dụng bởi người chơi."
-  player-not-found: "&cKhông tìm thấy người chơi này."
-  config-reloaded: "&aĐã tải lại cấu hình thành công!"
+  no-permission: "&cYou do not have permission to use this command."
+  player-only-command: "&cThis command can only be used by players."
+  player-not-found: "&cPlayer not found."
+  config-reloaded: "&aConfiguration reloaded successfully!"
   
-  self-enabled: "&aĐã bật chế độ nhìn trong bóng tối."
-  self-disabled: "&cĐã tắt chế độ nhìn trong bóng tối."
+  self-enabled: "&aNight vision has been enabled."
+  self-disabled: "&cNight vision has been disabled."
 
-  other-enabled: "&aĐã bật chế độ nhìn trong bóng tối cho &e{player}&a."
-  other-disabled: "&cĐã tắt chế độ nhìn trong bóng tối cho &e{player}&c."
+  other-enabled: "&aEnabled night vision for &e{player}&a."
+  other-disabled: "&cDisabled night vision for &e{player}&c."
 
-  toggled-by-other-on: "&aBạn đã được bật chế độ nhìn trong bóng tối bởi &e{sender}&a."
-  toggled-by-other-off: "&cChế độ nhìn trong bóng tối của bạn đã bị tắt bởi &e{sender}&c."
+  toggled-by-other-on: "&aYour night vision has been enabled by &e{sender}&a."
+  toggled-by-other-off: "&cYour night vision has been disabled by &e{sender}&c."
 ```
 
 -----
 
-## 🧑‍💻 Tác giả
+## 🧑‍💻 Author
 
-Plugin được tạo bởi **Hano**.
+Plugin created by **Hano**.
