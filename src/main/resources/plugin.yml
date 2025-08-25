@@ -1,0 +1,25 @@
+name: Hano-NightVision
+version: 1.0
+main: hano.nightvision.HanoNightVision
+api-version: 1.13
+author: VN.Hano
+description: A simple night vision plugin with configurable commands and messages.
+commands:
+  hano-nightvision:
+    description: Toggles night vision for yourself or others.
+    usage: /<command> [player]
+    aliases: [nv]
+  hano-nv-reload:
+    description: Reloads the plugin's configuration.
+    usage: /<command>
+    aliases: [nvrl]
+permissions:
+  hano.nightvision.use:
+    description: Allows a player to use the night vision command for themselves.
+    default: true
+  hano.nightvision.other:
+    description: Allows a player to toggle night vision for other players.
+    default: op
+  hano.nightvision.reload:
+    description: Allows a player to reload the plugin's configuration.
+    default: op

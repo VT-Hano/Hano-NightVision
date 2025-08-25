@@ -1,0 +1,36 @@
+command:
+  name: "hano-nightvision"
+  aliases: ["nv", "hano-nv", "nightvision"]
+
+messages:
+  prefix: "&7[&aHano-NightVision&7] "
+  no-permission: "&cBạn không có quyền để sử dụng lệnh này."
+  player-only-command: "&cLệnh này chỉ có thể được sử dụng bởi người chơi."
+  player-not-found: "&cKhông tìm thấy người chơi này."
+  config-reloaded: "&aĐã tải lại cấu hình thành công!"
+
+  self-enabled: "&aĐã bật chế độ nhìn trong bóng tối."
+  self-disabled: "&cĐã tắt chế độ nhìn trong bóng tối."
+
+  other-enabled: "&aĐã bật chế độ nhìn trong bóng tối cho &e{player}&a."
+  other-disabled: "&cĐã tắt chế độ nhìn trong bóng tối cho &e{player}&c."
+
+  toggled-by-other-on: "&aBạn đã được bật chế độ nhìn trong bóng tối bởi &e{sender}&a."
+  toggled-by-other-off: "&cChế độ nhìn trong bóng tối của bạn đã bị tắt bởi &e{sender}&c."
+
+# messages: (en)
+#messages:
+#  prefix: "&7[&aHano-NightVision&7] "
+#  no-permission: "&cYou do not have permission to use this command."
+#  player-only-command: "&cThis command can only be used by players."
+#  player-not-found: "&cPlayer not found."
+#  config-reloaded: "&aConfiguration reloaded successfully!"
+
+#  self-enabled: "&aNight vision mode enabled."
+#  self-disabled: "&cNight vision mode disabled."
+
+# other-enabled: "&aNight vision mode enabled for &e{player}&a."
+# other-disabled: "&cNight vision mode disabled for &e{player}&c."
+
+# toggled-by-other-on: "&aYour night vision has been enabled by &e{sender}&a."
+#  toggled-by-other-off: "&cYour night vision has been disabled by &e{sender}&c."
